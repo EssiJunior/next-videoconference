@@ -43,6 +43,7 @@ const Room = ({ params }: { params: { roomId: string } }) => {
                 mode: ZegoUIKitPrebuilt.VideoConference,
             },
             maxUsers: 10,
+            
         });
     };
 

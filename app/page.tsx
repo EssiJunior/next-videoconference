@@ -16,15 +16,15 @@ export default function Home() {
   }, []);
   return (
     <div className="w-full h-screen">
-      <section className="bg-gray-950 text-white">
-        <div className="mx-auto max-w-screen-xl px-4 py-32 flex-col gap-24 flex h-screen items-center">
-          <Image src="/logo.svg" alt="logo" width={200} height={200} />
-          <div className="mx-auto max-w-4xl text-center">
+      <section className="text-white flex flex-col items-center justify-evenly">
+        <div className="mx-auto max-w-screen-xl px-4 py-32 flex-col gap-10 flex items-center">
+          <Image src="/logo.png" alt="logo" width={200} height={200}/>
+          <div className="mx-auto  max-w-4xl text-center">
             <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text  font-extrabold text-transparent text-5xl">
               {`Have a smooth meeting`}
             </h1>
             <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text font-extrabold text-transparent text-5xl">
-              <span className="block">with team members</span>
+              <span className="block">with your team members</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl sm:text-xl/relaxed">
               Zegocloud is a global communication service provider which
@@ -35,7 +35,7 @@ export default function Home() {
                 type="text"
                 id="name"
                 onChange={(e) => setFullName(e.target.value.toString())}
-                className="border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2 w-full text-black"
+                className="border-2 rounded-md border-gray-200 focus:border-cyan-400 focus:outline-none focus:ring-0 px-4 py-2 w-full bg-black "
                 placeholder="Enter your name"
               />
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
                     id="roomid"
                     value={roomID}
                     onChange={(e) => setRoomID(e.target.value)}
-                    className="border rounded-md focus:border-transparent focus:outline-none focus:ring-0 px-4 py-2 w-full text-black"
+                    className="border-2 rounded-md border-gray-200 focus:border-cyan-400  focus:outline-none focus:ring-0 px-4 py-2 w-full bg-black"
                     placeholder="Enter room ID to join a meeting"
                   />
                   <button
@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
                 <div className="mt-4 flex items-center justify-center">
                   <button
-                    className="text-lg font-medium hover:text-blue-400 hover:underline"
+                    className="text-lg font-medium hover:text-blue-400 hover:underline hover:scale-110 ease-in-out duration-500"
                     onClick={() => router.push(`/room/${uuid()}`)}
                   >
                     Or create a new meeting
